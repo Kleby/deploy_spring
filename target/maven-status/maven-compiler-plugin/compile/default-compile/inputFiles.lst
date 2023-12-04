@@ -1,6 +1,7 @@
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\controllers\ProductController.java
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\DeployApplication.java
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\repository\ProductRepository.java
+D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\CorsConfig.java
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\services\ProductServiceImp.java
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\models\Product.java
 D:\TI\workspace\teste\deploy\src\main\java\com\example\deploy\deploy\services\ProductService.java

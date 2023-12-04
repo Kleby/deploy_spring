@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin("https://angular-invento-net.vercel.app/")
+@CrossOrigin("*")
 //@CrossOrigin(origins = "https://angular-invento-net.vercel.app")
 @RequestMapping("/api")
 public class ProductController {
@@ -35,7 +35,7 @@ public class ProductController {
         return ResponseEntity.ok().body(productService.findProductById(id));
     }
 
-    @PostMapping("/new-product")
+    @PostMapping("/product")
     public ResponseEntity<Product> AddNewProduct(@RequestBody Product newProduct){
         if(newProduct != null) return ResponseEntity.ok().body(productService.addProduct(newProduct));
         return ResponseEntity.badRequest().build();
