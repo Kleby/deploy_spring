@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin("*")
-//@CrossOrigin(origins = "https://angular-invento-net.vercel.app")
+//@CrossOrigin("*")
+//@CrossOrigin(origins = "https://angular-invento-c0rhs0djo-kleby.vercel.app/")
 @RequestMapping("/api")
 public class ProductController {
 
