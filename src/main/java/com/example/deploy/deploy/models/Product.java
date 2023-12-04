@@ -2,22 +2,65 @@ package com.example.deploy.deploy.models;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 
 @Entity
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column
-    String  code;
+    private String  code;
 
     @Column
-    String name;
+    private String name;
 
     @Column
-    Double price;
+    private String purchaseDate;
+
+    @Column
+    private String expirationDate;
+
+    @Column
+    private String stock;
+
+
+    @Column
+    private String price;
+
+    public String getPurchaseDate() {
+        return purchaseDate;
+    }
+
+    public void setPurchaseDate(String purchaseDate) {
+        this.purchaseDate = purchaseDate;
+    }
+
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public String getStock() {
+        return stock;
+    }
+
+    public void setStock(String stock) {
+        this.stock = stock;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     public Long getId() {
         return id;
@@ -43,11 +86,5 @@ public class Product {
         this.name = name;
     }
 
-    public Double getPrice() {
-        return price;
-    }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 }

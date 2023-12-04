@@ -14,7 +14,7 @@ public interface ProductService {
     Product addProduct(Product new_product);
 
     Product updateFullProduct(Long id, Product product);
-    Product updatePriceProduct(Long id, Double price);
+    Product updatePriceProduct(Long id, String price);
 
     void deleteProductById(Long id);
 

@@ -56,7 +56,7 @@ public class ProductServiceImp implements ProductService {
     }
 
     @Override
-    public Product updatePriceProduct(Long id, Double price) {
+    public Product updatePriceProduct(Long id, String price) {
         Optional<Product> productDB = productRepository.findById(id);
         if(productDB.isPresent()){
             // Restante do código

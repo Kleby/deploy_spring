@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api/product")
+@RequestMapping("/api")
 public class ProductController {
 
     private final Logger log = LoggerFactory.getLogger(DeployApplication.class);
@@ -23,12 +23,12 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping
+    @GetMapping("/product")
     public ResponseEntity<List<Product>>getAllProducts(){
         return ResponseEntity.ok().body(productService.findAllProducts());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/product/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable Long id){
         return ResponseEntity.ok().body(productService.findProductById(id));
     }
@@ -39,16 +39,16 @@ public class ProductController {
         return ResponseEntity.badRequest().build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/product/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id){
         productService.deleteProductById(id);
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/price/{id}")
-    public ResponseEntity<Product> updatePriceProduct(@PathVariable Long id, @RequestBody Map<String, Double> requestBody) {
+    @PutMapping("/product/price/{id}")
+    public ResponseEntity<Product> updatePriceProduct(@PathVariable Long id, @RequestBody Map<String, String> requestBody) {
         if (requestBody.containsKey("price")) {
-            Double price = requestBody.get("price");
+            String price = requestBody.get("price");
             var newPrice = productService.updatePriceProduct(id, price);
             return ResponseEntity.ok().body(newPrice);
         } else {
