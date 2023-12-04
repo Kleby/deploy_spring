@@ -12,7 +12,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("https://angular-invento-net.vercel.app") // Substitua pelo domínio da sua aplicação Angular
+                .allowedOrigins("http://localhost") // Substitua pelo domínio da sua aplicação Angular
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowCredentials(false).maxAge(3600);
     }
